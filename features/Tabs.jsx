@@ -2,16 +2,15 @@ import React, { Component } from 'react';
 import { Container, Header, Tab, Tabs, TabHeading, Text } from 'native-base';
 import CompletedPage from './CompletedPage';
 import PendingPage from './PendingPage';
-function TabComponent() {
+function TabComponent({navigation}) {
     return (
       <Container>
-        <Header hasTabs/>
         <Tabs>
           <Tab heading={ <TabHeading><Text>Pending</Text></TabHeading>}>
-            <PendingPage />
+            <PendingPage navigation={navigation} />
           </Tab>
           <Tab heading={ <TabHeading><Text>Done</Text></TabHeading>}>
-            <CompletedPage />
+            <CompletedPage navigation={navigation} />
         
           </Tab>
         </Tabs>

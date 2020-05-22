@@ -9,48 +9,33 @@ import CardComponent from "./CardComponent";
 let data = [
     {
       "title": "Move to Location 1",
+      "description": "Place the item at location 1 by 5pm",
       "status" : "Pending"
     },
     {
         "title": "Move to Location 2",
+        "description": "Place the item at location 2 by 5pm",
         "status" : "Pending"
     },
     {
         "title": "Move to Location 1",
+        "description": "Place the item at location 1 by 4pm",
         "status" : "Pending"
     },
     {
         "title": "Move to Location 3",
+        "description": "Place the item at location 3 by 3pm",
         "status" : "Pending"
     },
-    {
-        "title": "Move to Location 2",
-        "status" : "Pending"
-    },
-    {
-        "title": "Move to Location 1",
-        "status" : "Pending"
-    },
-    {
-        "title": "Move to Location 3",
-        "status" : "Pending"
-    }
+
 ]
-export default function PendingPage() {
+export default function PendingPage({navigation}) {
 
     const [state,setState] = React.useState([]);
 
   return ( 
-    <CardComponent data={data}/>
+    <CardComponent navigation={navigation} data={data}/>
 
   );
 }
 
-// const styles = StyleSheet.create({
-//   container: {
-//     flex: 1,
-//     backgroundColor: 'blue',
-//     alignItems: 'center',
-//     justifyContent: 'center',
-//   },
-// });

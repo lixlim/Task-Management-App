@@ -1,23 +1,10 @@
 import React from 'react';
-import {
-  StyleSheet,
-  Text,
-  View
-} from 'react-native';
 import TabComponent from "./Tabs";
 
-export default function App() {
+export default function MainHome({navigation}) {
   return ( 
-    <TabComponent/>
+    <TabComponent navigation={navigation}/>
 
   );
 }
 
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: 'blue',
-    alignItems: 'center',
-    justifyContent: 'center',
-  },
-});

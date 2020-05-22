@@ -7,36 +7,28 @@ import CardComponent from "./CardComponent";
 let data = [
     {
       "title": "Move to Location 1",
+      "description": "Place the item at location 1 by 5pm",
       "status" : "Completed"
     },
     {
         "title": "Move to Location 2",
+        "description": "Place the item at location 2 by 5pm",
         "status" : "Completed"
     },
     {
         "title": "Move to Location 1",
+        "description": "Place the item at location 1 by 3pm",
         "status" : "Completed"
     },
     {
         "title": "Move to Location 3",
+        "description": "Place the item at location 3 by 3pm",
         "status" : "Completed"
     },
-    {
-        "title": "Move to Location 2",
-        "status" : "Completed"
-    },
-    {
-        "title": "Move to Location 1",
-        "status" : "Completed"
-    },
-    {
-        "title": "Move to Location 3",
-        "status" : "Completed"
-    }
 ]
-export default function CompletedPage() {
+export default function CompletedPage({navigation}) {
   return ( 
-    <CardComponent data={data}/>
+    <CardComponent navigation={navigation} data={data}/>
 
 
   );

@@ -1,19 +1,43 @@
 import React, { Component } from 'react';
-import { Header,Card,Container, CardItem, Title, Content, Button, Left, Right, Body, Icon, Text } from 'native-base';
+import { Card,Container, CardItem, Title, Content, Button, Left, Right, Body, Icon, Text } from 'native-base';
+import { StyleSheet } from 'react-native';
+const styles = StyleSheet.create({
+    button: {
+      left: 200,
+      bottom:50
+    },
+    title:{
+     fontSize: 19
+    },
+    status:{
+      fontSize:14
+    }
+
+  });
+
+
 export default function CardComponent(props) {
 
     const cardItems = props.data.map((data,index) => {
         return (
         <Card key={index}>
-        <CardItem header>
-          <Text>{data.title}</Text>
+        <CardItem header>          
+          <Text style={styles.title}>{data.title}</Text>
         </CardItem>
-        {/* details */}
         <CardItem>
           <Body>
-            <Text>
-                {data.status}            
+          <Text>Status:</Text>
+
+            <Text style={styles.status}>
+            {data.status}            
             </Text>
+
+            {data.status=="Pending"?
+            <Button onPress={()=> {
+              props.navigation.navigate('Details',
+              {data: data})}
+              } style = {styles.button} primary ><Text> Start </Text></Button>: null}
+
           </Body>
         </CardItem>
      </Card>
@@ -30,3 +54,5 @@ export default function CardComponent(props) {
       </Container>
     );
   }
+
+
