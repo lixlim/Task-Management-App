@@ -7,31 +7,31 @@ import CardComponent from "./CardComponent";
 let data = [
     {
       "title": "Move to Location 1",
-      "status" : "Pending"
+      "status" : "Completed"
     },
     {
         "title": "Move to Location 2",
-        "status" : "Pending"
+        "status" : "Completed"
     },
     {
         "title": "Move to Location 1",
-        "status" : "Pending"
+        "status" : "Completed"
     },
     {
         "title": "Move to Location 3",
-        "status" : "Pending"
+        "status" : "Completed"
     },
     {
         "title": "Move to Location 2",
-        "status" : "Pending"
+        "status" : "Completed"
     },
     {
         "title": "Move to Location 1",
-        "status" : "Pending"
+        "status" : "Completed"
     },
     {
         "title": "Move to Location 3",
-        "status" : "Pending"
+        "status" : "Completed"
     }
 ]
 export default function CompletedPage() {

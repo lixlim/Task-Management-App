@@ -2,30 +2,28 @@ import React, { Component } from 'react';
 import { Header,Card,Container, CardItem, Title, Content, Button, Left, Right, Body, Icon, Text } from 'native-base';
 export default function CardComponent(props) {
 
-    const cardItems = props.data.map((data) => {
-        console.log("Test")
+    const cardItems = props.data.map((data,index) => {
+        return (
+        <Card key={index}>
+        <CardItem header>
+          <Text>{data.title}</Text>
+        </CardItem>
+        {/* details */}
+        <CardItem>
+          <Body>
+            <Text>
+                {data.status}            
+            </Text>
+          </Body>
+        </CardItem>
+     </Card>
+        )
     }
     )
     return (
         <Container>
         <Content>
-            <Card>
-            <CardItem header>
-              <Text>hellotssttt</Text>
-            </CardItem>
-            {/* details */}
-            <CardItem>
-              <Body>
-                <Text>
-                  //Your text here
-                </Text>
-              </Body>
-            </CardItem>
-            {/* status */}
-            <CardItem footer>
-              <Text>GeekyAnts</Text>
-            </CardItem>
-         </Card>
+           {cardItems}
           
         </Content>
 
