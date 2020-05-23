@@ -1,8 +1,11 @@
 import React from 'react';
 import {
   StyleSheet,
-  View
+  View,
 } from 'react-native';
+import { connect } from "react-redux"
+import { updateTask } from "../redux";
+ 
 import { Card,Container, CardItem, Title, Content, Button, Left, Right, Body, Icon, Text } from 'native-base';
 const styles = StyleSheet.create({
     title:{
@@ -29,7 +32,7 @@ const styles = StyleSheet.create({
     // }
 
   });
-export default function DetailsPage({route,navigation}) {
+const DetailsPage = ({updateTask,route,navigation}) => {
     const { data } = route.params;
   return ( 
     <View>
@@ -51,7 +54,24 @@ export default function DetailsPage({route,navigation}) {
     </CardItem>
     </Card>
      {data.status=="Pending"?
-     <Button block onPress={()=> props.navigation.navigate('Details')} style = {styles.button} primary ><Text> Complete </Text></Button>: null}
+     <Button block onPress={()=> {
+       updateTask
+       navigation.navigate('Home')
+
+     }} style = {styles.button} primary ><Text> Complete </Text></Button>: null}
     </View>
   );
 }
+
+
+
+
+const mapDispatchToProps = dispatch => {
+  return {
+    updateTask: () => {
+      console.log("test");
+      dispatch(updateTask())
+  }
+}}
+
+export default connect(null,mapDispatchToProps)(DetailsPage);

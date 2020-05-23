@@ -1,6 +1,8 @@
 import React, { Component } from 'react';
 import { Card,Container, CardItem, Title, Content, Button, Left, Right, Body, Icon, Text } from 'native-base';
 import { StyleSheet } from 'react-native';
+
+
 const styles = StyleSheet.create({
     button: {
       left: 200,
@@ -16,7 +18,7 @@ const styles = StyleSheet.create({
   });
 
 
-export default function CardComponent(props) {
+const CardComponent = (props) => {
 
     const cardItems = props.data.map((data,index) => {
         return (
@@ -56,3 +58,6 @@ export default function CardComponent(props) {
   }
 
 
+
+
+export default CardComponent;

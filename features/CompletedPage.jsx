@@ -1,36 +1,20 @@
 import React from 'react';
-import {
-  Text,
-  View
-} from 'react-native';
+import { connect } from "react-redux"
+
 import CardComponent from "./CardComponent";
-let data = [
-    {
-      "title": "Move to Location 1",
-      "description": "Place the item at location 1 by 5pm",
-      "status" : "Completed"
-    },
-    {
-        "title": "Move to Location 2",
-        "description": "Place the item at location 2 by 5pm",
-        "status" : "Completed"
-    },
-    {
-        "title": "Move to Location 1",
-        "description": "Place the item at location 1 by 3pm",
-        "status" : "Completed"
-    },
-    {
-        "title": "Move to Location 3",
-        "description": "Place the item at location 3 by 3pm",
-        "status" : "Completed"
-    },
-]
-export default function CompletedPage({navigation}) {
+
+const CompletedPage = ({navigation,completedTask})  =>{
   return ( 
-    <CardComponent navigation={navigation} data={data}/>
+    <CardComponent navigation={navigation} data={completedTask}/>
 
 
   );
 }
 
+const mapStateToProps = state => {
+  return {
+    completedTask : state.completedTask
+  }
+}
+
+export default connect(mapStateToProps)(CompletedPage);

@@ -1,5 +1,5 @@
 import 'react-native-gesture-handler';
-
+import { Provider } from "react-redux"
 import React from 'react';
 import { AppLoading } from 'expo';
 import { Container, Text } from 'native-base';
@@ -9,6 +9,7 @@ import MainHome from "./features/MainHome";
 import DetailsPage from "./features/DetailsPage";
 import { NavigationContainer } from '@react-navigation/native';
 import { createStackNavigator } from '@react-navigation/stack';
+import store from "./redux/store";
 const Stack = createStackNavigator();
 
 export default class App extends React.Component {
@@ -34,12 +35,14 @@ export default class App extends React.Component {
     }
 
     return (
+      <Provider store = {store}>
       <NavigationContainer>
         <Stack.Navigator initialRouteName="Home">
           <Stack.Screen name="Home" component={MainHome} />
           <Stack.Screen name="Details" component={DetailsPage} />
         </Stack.Navigator>
       </NavigationContainer>
+      </Provider>
     );
   }
 }
