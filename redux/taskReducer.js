@@ -61,25 +61,24 @@ const taskReducer = (state = initialState, action) => {
     switch(action.type) {
         case UPDATE_TASK:  {
             console.log("update")
+            console.log(state.pendingTask);
             for (let i = 0; i < state.pendingTask.length; i++ ){
-                if (currentTask.id == state.pendingTask[i]){
+                if (action.payload.id == state.pendingTask[i].id){
                     let newCompletedTask = {
                         ...state.pendingTask[i],
                         "status": "Completed"
                     }
                     state.completedTask.push(newCompletedTask);
-                    state.pendingTask = state.pendingTask.slice(i);
+                    state.pendingTask = state.pendingTask.splice(i--,1);
+                    console.log("test2");
+                    console.log(state.pendingTask);
+                    console.log(state.completedTask);
                 }
-
             }
             state.currentTask = {};
             return state;
         }
-        case SET_TASK: {
-            return {
-                currentTask : action.payload
-            }
-        }
+ 
         default: return state
 
     }

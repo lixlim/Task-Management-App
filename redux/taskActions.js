@@ -1,14 +1,9 @@
-import { SET_TASK } from "./taskTypes";
 import { UPDATE_TASK } from "./taskTypes";
 
-export const setTask = (data) => {
-    return {
-        type: SET_TASK
-    }
-}
 
-export const updateTask = () => {
+export const updateTask = (data) => {
     return {
-        type: UPDATE_TASK
+        type: UPDATE_TASK,
+        payload: data
     }
 }

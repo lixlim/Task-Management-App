@@ -55,7 +55,7 @@ const DetailsPage = ({updateTask,route,navigation}) => {
     </Card>
      {data.status=="Pending"?
      <Button block onPress={()=> {
-       updateTask
+       updateTask(data)
        navigation.navigate('Home')
 
      }} style = {styles.button} primary ><Text> Complete </Text></Button>: null}
@@ -68,9 +68,9 @@ const DetailsPage = ({updateTask,route,navigation}) => {
 
 const mapDispatchToProps = dispatch => {
   return {
-    updateTask: () => {
+    updateTask: (data) => {
       console.log("test");
-      dispatch(updateTask())
+      dispatch(updateTask(data))
   }
 }}
 
