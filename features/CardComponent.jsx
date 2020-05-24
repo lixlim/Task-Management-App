@@ -12,7 +12,13 @@ const styles = StyleSheet.create({
      fontSize: 19
     },
     status:{
-      fontSize:14
+      //fontSize:14,
+      left: 50,
+      bottom:18
+    },
+    id: {
+      left: 30,
+      bottom:19
     }
 
   });
@@ -28,6 +34,11 @@ const CardComponent = (props) => {
         </CardItem>
         <CardItem>
           <Body>
+          <Text> ID: </Text>
+          <Text style={styles.id}>
+            {data.id}            
+            </Text>
+
           <Text>Status:</Text>
 
             <Text style={styles.status}>
