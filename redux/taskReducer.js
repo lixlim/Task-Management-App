@@ -1,5 +1,4 @@
 import { UPDATE_TASK } from "./taskTypes";
-import { SET_TASK } from "./taskTypes";
 
 const initialState = {
     pendingTask : [

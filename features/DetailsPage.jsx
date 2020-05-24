@@ -6,7 +6,7 @@ import {
 import { connect } from "react-redux"
 import { updateTask } from "../redux";
  
-import { Card,Container, CardItem, Title, Content, Button, Left, Right, Body, Icon, Text } from 'native-base';
+import { Card, CardItem, Button, Body, Text } from 'native-base';
 const styles = StyleSheet.create({
     title:{
      fontSize: 22,

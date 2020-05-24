@@ -1,5 +1,5 @@
-import React, { Component } from 'react';
-import { Card,Container, CardItem, Title, Content, Button, Left, Right, Body, Icon, Text } from 'native-base';
+import React from 'react';
+import { Card,Container, CardItem, Content, Button, Body, Text } from 'native-base';
 import { StyleSheet } from 'react-native';
 
 

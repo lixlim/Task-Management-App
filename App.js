@@ -2,7 +2,6 @@ import 'react-native-gesture-handler';
 import { Provider } from "react-redux"
 import React from 'react';
 import { AppLoading } from 'expo';
-import { Container, Text } from 'native-base';
 import * as Font from 'expo-font';
 import { Ionicons } from '@expo/vector-icons';
 import MainHome from "./features/MainHome";

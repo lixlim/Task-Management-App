@@ -1,5 +1,5 @@
-import React, { Component } from 'react';
-import { Container, Header, Tab, Tabs, TabHeading, Text } from 'native-base';
+import React from 'react';
+import { Container, Tab, Tabs, TabHeading, Text } from 'native-base';
 import CompletedPage from './CompletedPage';
 import PendingPage from './PendingPage';
 function TabComponent({navigation}) {
