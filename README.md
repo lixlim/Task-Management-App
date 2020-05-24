@@ -12,5 +12,5 @@ expo start
 ```
 
 3. Open the expo application and select "Scan QR Code"
-4. Scan the QR code the localhost page created from the expo start command using your mobile phone
+4. Scan the QR code the localhost page using your mobile phone
 5. The application will be running on the mobile phone
