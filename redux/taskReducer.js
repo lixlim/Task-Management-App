@@ -60,8 +60,6 @@ const initialState = {
 const taskReducer = (state = initialState, action) => {
     switch(action.type) {
         case UPDATE_TASK:  {
-            console.log("update")
-            console.log(state.pendingTask);
             let newCompletedTaskList = [];
             let tempPendingTaskList = [];
             let finalPendingTaskList = [];
@@ -71,7 +69,6 @@ const taskReducer = (state = initialState, action) => {
                         ...state.pendingTask[i],
                         "status": "Completed"
                     }
-                    console.log("newtask", newCompletedTask)
                     newCompletedTaskList = [
                         ...state.completedTask,
                         newCompletedTask
@@ -80,7 +77,6 @@ const taskReducer = (state = initialState, action) => {
                     finalPendingTaskList = [...tempPendingTaskList.slice(0,i),
                                             ...tempPendingTaskList.slice(i+1)
                                         ]
-                    console.log("test2");
                  
                 }
             }

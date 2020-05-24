@@ -69,7 +69,6 @@ const DetailsPage = ({updateTask,route,navigation}) => {
 const mapDispatchToProps = dispatch => {
   return {
     updateTask: (data) => {
-      console.log("test");
       dispatch(updateTask(data))
   }
 }}
