@@ -24,9 +24,9 @@ const styles = StyleSheet.create({
   });
 
 
-const CardComponent = (props) => {
+const CardComponent = ({data, navigation}) => {
 
-    const cardItems = props.data.map((data,index) => {
+    const cardItems = data.map((data,index) => {
         return (
         <Card key={index}>
         <CardItem header>          
@@ -47,7 +47,7 @@ const CardComponent = (props) => {
 
             {data.status=="Pending"?
             <Button onPress={()=> {
-              props.navigation.navigate('Details',
+              navigation.navigate('Details',
               {data: data})}
               } style = {styles.button} primary ><Text> Start </Text></Button>: null}
 
