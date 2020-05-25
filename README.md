@@ -12,6 +12,6 @@ yarn
 expo start
 ```
 
-4. Open the expo application and select "Scan QR Code"
-5. Scan the QR code the localhost page using your mobile phone
+4. Open the expo application on the mobile phone and select "Scan QR Code"
+5. Scan the QR code the localhost page using the mobile phone
 6. The application will be running on the mobile phone
